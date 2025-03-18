@@ -8,7 +8,11 @@ import './App.css';
 
 const App = () => {
   const quote1 = Quotes[Math.floor(Math.random() * Quotes.length)];
-  const quote2 = Quotes[Math.floor(Math.random() * Quotes.length)];
+  let quote2 = Quotes[Math.floor(Math.random() * Quotes.length)];
+  if (quote1===quote2){
+    const quote3 = Quotes[Math.floor(Math.random() * Quotes.length)];
+    quote2=quote3
+  }
 
   return (
     <Router>
